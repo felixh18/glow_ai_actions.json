@@ -31,7 +31,7 @@ To import these actions into the GPT builder:
 3. Click **“Import from URL”**
 4. Paste the **raw URL** of `glow_ai_actions.json`
 
-## 🔗 Example Raw URL
+## 🔗 Raw URL
 
 ```bash
-[https://raw.githubusercontent.com/felixh18/glow_ai_actions.json/main/glow_ai_actions.json](https://github.com/felixh18/glow_ai_actions.json.git)
+https://raw.githubusercontent.com/felixh18/glow_ai_actions.json/main/glow_ai_actions.json
