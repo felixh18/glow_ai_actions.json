@@ -34,4 +34,4 @@ To import these actions into the GPT builder:
 ## 🔗 Example Raw URL
 
 ```bash
-https://raw.githubusercontent.com/felixh18/glow_ai_actions.json/main/glow_ai_actions.json
+[https://raw.githubusercontent.com/felixh18/glow_ai_actions.json/main/glow_ai_actions.json](https://github.com/felixh18/glow_ai_actions.json.git)
