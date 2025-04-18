@@ -1,0 +1,144 @@
+{
+  "actions": [
+    {
+      "name": "get_product_recommendations",
+      "description": "Use this to recommend clean, non-toxic skincare products based on the user\u2019s skin type, concerns, and budget.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "skin_type": {
+            "type": "string",
+            "enum": [
+              "oily",
+              "dry",
+              "combination",
+              "sensitive",
+              "normal"
+            ]
+          },
+          "concerns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "budget": {
+            "type": "string",
+            "enum": [
+              "$",
+              "$$",
+              "$$$"
+            ]
+          },
+          "routine_step": {
+            "type": "string",
+            "enum": [
+              "cleanser",
+              "moisturizer",
+              "serum",
+              "sunscreen",
+              "toner",
+              "treatment"
+            ]
+          }
+        },
+        "required": [
+          "skin_type",
+          "concerns",
+          "routine_step"
+        ]
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "why_recommended": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "compare_products",
+      "description": "Use this to compare a user\u2019s product with a cleaner or more effective version.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "product_name"
+        ]
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "better_alternative": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "brand": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "why_better": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "explain_ingredient",
+      "description": "Use this to explain what a specific skincare ingredient does in simple terms.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ingredient_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ingredient_name"
+        ]
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "explanation": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
